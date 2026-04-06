@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></head>
+<body>
+
+  <nav class="navbar">
+  <div class="logo"><span>D</span>I<span>V</span></div>
+  <!-- <div class="logo"><img src="logo.png" alt="" width="100px"></div> -->
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="designs.html">Developers</a></li>
+    <li><a href="free.html">Free Products</a></li>
+    <li><a href="signin.html" class="nav-btn">Join Us</a></li>
+    </div>
+  </ul>
+      <div class="social">
+           <ul class="list-unstyled custom-social d-flex justify-content-around">
+          <li><a href="#"><span class="fa fa-brands fa-facebook rounded-circle p-2"></span></a></li>
+          <li><a href="#"><span class="fa fa-brands fa-twitter rounded-circle p-2"></span></a></li>
+          <li><a href="#"><span class="fa fa-brands fa-instagram rounded-circle p-2"></span></a></li>
+          <li><a href="#"><span class="fa fa-brands fa-linkedin rounded-circle p-2"></span></a></li>
+        </ul>
+      </div>
+</nav>
+
+    <section class="auth-section">
+  <h2>Join DIV</h2>
+  <p>Choose how you want to use the platform</p>
+
+  <!-- User Type -->
+  <div class="user-type">
+    <button onclick="showForm('client')">Client</button>
+    <button onclick="showForm('designer-upload')">Designer (Upload Work)</button>
+    <button onclick="showForm('designer-ready')">Designer (Ready Designs)</button>
+  </div>
+
+  <!-- FORM -->
+  <form class="auth-form">
+
+    <!-- Common -->
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+
+    <!-- CLIENT -->
+    <div class="form-section" id="client">
+      <input type="text" placeholder="Business Type (Restaurant, Store...)">
+      <textarea placeholder="Describe what you want"></textarea>
+      <input type="text" placeholder="Preferred Designer (optional)">
+    </div>
+
+    <!-- DESIGNER UPLOAD -->
+    <div class="form-section" id="designer-upload">
+      <select>
+        <option disabled selected>Specialization</option>
+        <option>Frontend</option>
+        <option>Backend</option>
+        <option>Full Stack</option>
+        <option>Game Development</option>
+        <option>UI / UX</option>
+      </select>
+
+      <input type="text" placeholder="Education / Background">
+      <textarea placeholder="Tell us about your experience"></textarea>
+      <input type="file">
+    </div>
+
+    <!-- DESIGNER READY -->
+    <div class="form-section" id="designer-ready">
+      <select>
+        <option disabled selected>What are you looking for?</option>
+        <option>Web Templates</option>
+        <option>Dashboards</option>
+        <option>Landing Pages</option>
+        <option>Mobile UI</option>
+      </select>
+    </div>
+
+    <button type="submit" class="submit-btn">Continue</button>
+  </form>
+</section>
+<script>
+  function showForm(type) {
+    document.querySelectorAll('.form-section')
+      .forEach(section => section.style.display = 'none');
+
+    document.getElementById(type).style.display = 'block';
+  }
+</script>
+<footer>DIV — Join Us</footer>
+<script src="script.js"></script>
+</body>
+</html>
